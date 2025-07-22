@@ -5,8 +5,7 @@ export type TSource = {
 export const sourcesAPI = {
     getSources: async (token: string | null) => {
         return await fetch(
-            // `http://localhost:3003/sources`
-            `https://express-server-test-kappa.vercel.app/sources`, {
+            `http://localhost:3003/sources`, {
             method: 'GET',
             headers: {
                 'Authorization': `Bearer ${token}`
@@ -17,8 +16,7 @@ export const sourcesAPI = {
     },
     addSource: async (token: string | null, title: string) => {
         return await fetch(
-            // 'http://localhost:3003/sources'
-            'https://express-server-test-kappa.vercel.app/sources', {
+            'http://localhost:3003/sources', {
             method: 'POST',
             headers: {
                 'Content-type': 'Application/json',
@@ -29,8 +27,7 @@ export const sourcesAPI = {
     },
     getSource: async (token: string | null, id: string | undefined) => {
         return await fetch(
-            // `http://localhost:3003/sources/${id}`
-            `https://express-server-test-kappa.vercel.app/sources/${id}`, {
+            `http://localhost:3003/sources/${id}`, {
             method: "GET",
             headers: {
                 'Authorization': `Bearer ${token}`
@@ -39,8 +36,7 @@ export const sourcesAPI = {
     },
     deleteSource: async (token: string | null, id: string | undefined) => {
         return await fetch(
-            // `http://localhost:3003/sources/${id}`
-            `https://express-server-test-kappa.vercel.app/sources/${id}`, {
+            `http://localhost:3003/sources/${id}`, {
             method: 'DELETE',
             headers: {
                 'Authorization': `Bearer ${token}`
@@ -49,8 +45,7 @@ export const sourcesAPI = {
     },
     updateSource: async (token: string | null, title: string, id: string | undefined) => {
         return await fetch(
-            // `http://localhost:3003/sources/${id}`
-            `https://express-server-test-kappa.vercel.app/sources/${id}`, {
+            `http://localhost:3003/sources/${id}`, {
             method: 'PUT',
             headers: {
                 'Content-type': 'Application/json',

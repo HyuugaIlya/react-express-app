@@ -9,8 +9,7 @@ export type TSource = {
 export const authAPI = {
     fetchUser: async (token: string | null) => {
         return await fetch(
-            // 'http://localhost:3003/auth/get-user'
-            'https://express-server-test-kappa.vercel.app/auth/get-user', {
+            'http://localhost:3003/auth/get-user', {
             method: 'GET',
             headers: {
                 'Authorization': `Bearer ${token}`
@@ -24,8 +23,7 @@ export const authAPI = {
     },
     fetchLogin: async (data: TForm) => {
         return await fetch(
-            // 'http://localhost:3003/auth/login'
-            'https://express-server-test-kappa.vercel.app/auth/login', {
+            'http://localhost:3003/auth/login', {
             method: 'POST',
             credentials: 'include',
             headers: {
@@ -45,8 +43,7 @@ export const authAPI = {
     },
     fetchSignup: async (data: TSignupForm) => {
         return await fetch(
-            // 'http://localhost:3003/auth/signup'
-            'https://express-server-test-kappa.vercel.app/auth/signup', {
+            'http://localhost:3003/auth/signup', {
             method: 'POST',
             credentials: 'include',
             headers: {
@@ -63,8 +60,7 @@ export const authAPI = {
     },
     fetchRefresh: async () => {
         return await fetch(
-            // 'http://localhost:3003/auth/refresh'
-            'https://express-server-test-kappa.vercel.app/auth/refresh', {
+            'http://localhost:3003/auth/refresh', {
             method: 'POST',
             credentials: 'include'
         })
@@ -73,10 +69,9 @@ export const authAPI = {
     },
     fetchLogout: async () => {
         return await fetch(
-            // 'http://localhost:3003/auth/logout'
-            'https://express-server-test-kappa.vercel.app/auth/logout', {
+            'http://localhost:3003/auth/logout', {
             method: 'POST',
-            credentials: 'include',
+            credentials: 'include'
         })
     }
 }
