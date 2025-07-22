@@ -1,54 +1,50 @@
-# React + TypeScript + Vite
+# README.md для React проекта на Vite + TypeScript
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## 🚀 Обзор проекта
 
-Currently, two official plugins are available:
+Этот проект создан с использованием:
+- [Vite](https://vitejs.dev/) - современный инструмент для сборки фронтенд-приложений
+- [React](https://react.dev/) - библиотека для построения пользовательских интерфейсов
+- [TypeScript](https://www.typescriptlang.org/) - типизированное надмножество JavaScript
+- [Yarn](https://yarnpkg.com/) - менеджер пакетов
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 📦 Установка
 
-## Expanding the ESLint configuration
+1. Убедитесь, что у вас установлен [Node.js](https://nodejs.org/) (версия 20+)
+2. Установите Yarn глобально (если ещё не установлен):
+   ```bash
+   npm install -g yarn
+   ```
+3. Установите зависимости:
+   ```bash
+   yarn install
+   ```
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+## 🛠 Команды
 
-```js
-export default tseslint.config({
-  extends: [
-    // Remove ...tseslint.configs.recommended and replace with this
-    ...tseslint.configs.recommendedTypeChecked,
-    // Alternatively, use this for stricter rules
-    ...tseslint.configs.strictTypeChecked,
-    // Optionally, add this for stylistic rules
-    ...tseslint.configs.stylisticTypeChecked,
-  ],
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
+- `yarn dev` - запуск development сервера
+- `yarn build` - сборка production версии
+- `yarn preview` - локальный просмотр production сборки
+- `yarn lint` - проверка кода с ESLint
+
+## 🏗 Структура проекта
+
+```
+src/
+├── api/            # API приложения
+├── components/     # Компоненты приложения
+├── context/        # Контекст для хука useContext
+├── hooks/          # Кастомные хуки
+├── layouts/        # Лейауты приложения
+├── providers/      # Провайдеры для хука useContext
+├── App.tsx         # Главный компонент приложения
+├── main.tsx        # Точка входа
+├──vite-env.d.ts    # Типы Vite
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+## 🔧 Конфигурация
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default tseslint.config({
-  plugins: {
-    // Add the react-x and react-dom plugins
-    'react-x': reactX,
-    'react-dom': reactDom,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended typescript rules
-    ...reactX.configs['recommended-typescript'].rules,
-    ...reactDom.configs.recommended.rules,
-  },
-})
-```
+- `vite.config.ts` - конфигурация Vite
+- `tsconfig.json` - конфигурация TypeScript
+- `.eslintrc.cjs` - конфигурация ESLint
+- `yarn.lock` - версии зависимостей
